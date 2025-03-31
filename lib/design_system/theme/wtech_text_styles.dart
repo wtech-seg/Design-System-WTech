@@ -4,8 +4,8 @@ import 'wtech_colors.dart';
 
 class WtechTextStyles {
   static const headline = TextStyle(
-    fontSize: 24,
-    fontWeight: FontWeight.bold,
+    fontSize: 36,
+    fontWeight: FontWeight.w800,
     color: WtechColors.textDarkGray,
   );
 
