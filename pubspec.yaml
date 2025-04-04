@@ -28,3 +28,4 @@ flutter:
   uses-material-design: true
   assets:
     - lib/design_system/assets/svgs/
+    - lib/design_system/assets/pngs/

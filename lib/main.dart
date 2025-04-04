@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wtech_design_system/design_system/components/body_card.dart';
 import 'package:wtech_design_system/design_system/components/password_field.dart';
 import 'package:wtech_design_system/design_system/components/wtech_mobile_button.dart';
+import 'package:wtech_design_system/design_system/components/navigation_drawer.dart';
 import 'design_system/design_system.dart';
 
 void main() {
@@ -32,22 +33,30 @@ class DesignSystemShowcase extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Design System', style: WtechTextStyles.headline),
       ),
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            SvgPicture.asset(
-              'lib/design_system/assets/svgs/logobranca.svg',
-              width: 120,
+      body: Row(
+        children: [
+          NavigationDrawerWtech(),
+          Expanded(
+            child: Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SvgPicture.asset(
+                    'lib/design_system/assets/svgs/logobranca.svg',
+                    width: 120,
+                  ),
+                  const SizedBox(height: 24),
+                  WtechButton(label: 'Entrar', onPressed: () {}),
+                  WtechMobileButton(label: 'Entrar', onPressed: () {}),
+                  PasswordField(),
+                  BodyCard(name: 'Teste'),
+                ],
+              ),
             ),
-            const SizedBox(height: 24),
-            WtechButton(label: 'Entrar', onPressed: () {}),
-            WtechMobileButton(label: 'Entrar', onPressed: () {}),
-            PasswordField(),
-            BodyCard(name: 'Teste'),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 }
+
