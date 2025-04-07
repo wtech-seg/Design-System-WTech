@@ -14,5 +14,10 @@ class WtechColors {
   static const Color textLightGray = Color(0xFF8998B0);
   static const Color textDarkGray = Color(0xFF31456A);
   static const Color textCyan = Color(0xFF009DE0);
+  static const Color textRed = Color(0xFFEB333E);
+
+
+  // SnacksBar
+  static const Color redSnackBar = Color(0xFFFBD6D8);
 
 }

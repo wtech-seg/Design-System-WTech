@@ -31,5 +31,12 @@ class WtechTheme {
         textStyle: WtechTextStyles.button,
       ),
     ),
+    snackBarTheme: SnackBarThemeData(
+      backgroundColor: WtechColors.redSnackBar,
+      contentTextStyle: TextStyle(color: WtechColors.textRed),
+      behavior: SnackBarBehavior.floating,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+      insetPadding: EdgeInsets.all(16),
+    ),
   );
 }
