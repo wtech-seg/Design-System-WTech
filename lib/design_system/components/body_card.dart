@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class BodyCard extends StatelessWidget {
   final String name;
@@ -42,9 +43,10 @@ class BodyCard extends StatelessWidget {
           // Ícone ou avatar em estilo neumórfico
           AvatarCardCircle(
             baseColor: baseColor,
-            child: const Icon(
-              Icons.person,
-              color: Color(0xFFE3EDF7), // Ajuste conforme desejado
+            child:SvgPicture.asset(
+              'packages/lib/design_system/assets/svgs/profile.svg', // Ou 'packages/wtech_design_system/assets/images/my_custom_icon.svg' se o asset estiver no package
+              width: 24,
+              height: 24,
             ),
           ),
           const SizedBox(width: 12),

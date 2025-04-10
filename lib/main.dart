@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wtech_design_system/design_system/components/body_card.dart';
 import 'package:wtech_design_system/design_system/components/password_field.dart';
+import 'package:wtech_design_system/design_system/components/wtech_appbar.dart';
 import 'package:wtech_design_system/design_system/components/wtech_mobile_button.dart';
 import 'package:wtech_design_system/design_system/components/navigation_drawer.dart';
 import 'design_system/design_system.dart';
@@ -30,9 +31,7 @@ class DesignSystemShowcase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Design System', style: WtechTextStyles.headline),
-      ),
+      appBar: WtechAppBar(title: ''),
       body: Row(
         children: [
           NavigationDrawerWtech(),
