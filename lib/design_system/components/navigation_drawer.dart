@@ -35,7 +35,7 @@ class NavigationDrawerWtechState extends State<NavigationDrawerWtech> {
                     padding: EdgeInsets.symmetric(vertical: 40),
                     alignment: Alignment.center,
                     child: Image.asset(
-                      'lib/design_system/assets/pngs/dark_w.png',
+                      'packages/wtech_design_system/assets/pngs/dark_w.png',
                       width: 120,
                       height: 150,
                       fit: BoxFit.contain,
@@ -97,7 +97,7 @@ class NavigationDrawerWtechState extends State<NavigationDrawerWtech> {
           width: 30,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('lib/design_system/assets/pngs/menu.png'),
+              image: AssetImage('packages/wtech_design_system/assets/pngs/menu.png'),
               fit: BoxFit.scaleDown,
             ),
           ),
