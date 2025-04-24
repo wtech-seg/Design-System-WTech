@@ -6,6 +6,7 @@ class WtechColors {
   static const Color primary = Color(0xFF001727);
   static const Color secondary = Color(0xFF0099FF);
   static const Color background = Color(0xFFE6EDF6);
+  static const Color backgroundCard = Color(0xFFE3EDF7);
 
   // Texto
   static const Color textWhite = Color(0xFFFFFFFF);

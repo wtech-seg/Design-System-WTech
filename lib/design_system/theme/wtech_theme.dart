@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../design_system.dart';
-import 'wtech_colors.dart';
 import 'wtech_text_styles.dart';
 import 'package:google_fonts/google_fonts.dart';
 

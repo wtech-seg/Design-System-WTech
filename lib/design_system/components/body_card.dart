@@ -15,53 +15,55 @@ class BodyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Cor de fundo do cartão (use a do seu Design System, se preferir)
     final Color baseColor = cardColor ?? const Color(0xFFE3EDF7);
 
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      decoration: BoxDecoration(
-        color: baseColor,
-        borderRadius: BorderRadius.circular(cardRadius),
-        boxShadow: [
-          // Sombra clara no canto superior/esquerda
-          BoxShadow(
-            color: Colors.white.withOpacity(0.7),
-            offset: const Offset(-3, -3),
-            blurRadius: 6,
-          ),
-          // Sombra escura no canto inferior/direita
-          BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            offset: const Offset(3, 3),
-            blurRadius: 6,
-          ),
-        ],
-      ),
-      child: Row(
-        children: [
-          // Ícone ou avatar em estilo neumórfico
-          AvatarCardCircle(
-            baseColor: baseColor,
-            child:SvgPicture.asset(
-              'packages/wtech_design_system/assets/svgs/profile.svg', // Ou 'packages/wtech_design_system/assets/images/my_custom_icon.svg' se o asset estiver no package
-              width: 32,
-              height: 32,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 6.0),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        decoration: BoxDecoration(
+          color: baseColor,
+          borderRadius: BorderRadius.circular(cardRadius),
+          boxShadow: [
+            // Sombra clara no canto superior/esquerda
+            BoxShadow(
+              color: Colors.white.withOpacity(0.7),
+              offset: const Offset(-3, -3),
+              blurRadius: 6,
             ),
-          ),
-          const SizedBox(width: 12),
-          // Nome
-          Expanded(
-            child: Text(
-              name,
-              style: const TextStyle(
-                fontSize: 16,
-                color: Color(0xFF122240),
-                fontWeight: FontWeight.bold,
+            // Sombra escura no canto inferior/direita
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              offset: const Offset(3, 3),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: Row(
+          children: [
+            // Ícone ou avatar em estilo neumórfico
+            AvatarCardCircle(
+              baseColor: baseColor,
+              child:SvgPicture.asset(
+                'packages/wtech_design_system/assets/svgs/profile.svg', // Ou 'packages/wtech_design_system/assets/images/my_custom_icon.svg' se o asset estiver no package
+                width: 30,
+                height: 30,
               ),
             ),
-          ),
-        ],
+            const SizedBox(width: 15),
+            // Nome
+            Expanded(
+              child: Text(
+                name,
+                style: const TextStyle(
+                  fontSize: 16,
+                  color: Color(0xFF122240),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -7,11 +7,11 @@ class WtechAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? actionWidget;
 
   const WtechAppBar({
-    Key? key,
+    super.key,
     required this.title,
     this.onBack,
     this.actionWidget,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

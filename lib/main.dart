@@ -41,7 +41,7 @@ class DesignSystemShowcase extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   SvgPicture.asset(
-                    'lib/design_system/assets/svgs/logobranca.svg',
+                    'packages/wtech_design_system/assets/svgs/logobranca.svg',
                     width: 120,
                   ),
                   const SizedBox(height: 24),
