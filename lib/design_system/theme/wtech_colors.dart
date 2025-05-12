@@ -20,5 +20,6 @@ class WtechColors {
 
   // SnacksBar
   static const Color redSnackBar = Color(0xFFFBD6D8);
+  static const Color greenSnackBar = Color(0xFFCCEFE9);
 
 }
