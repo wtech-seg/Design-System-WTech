@@ -6,4 +6,5 @@ export 'components/wtech_button.dart';
 export 'components/wtech_appbar.dart';
 export 'components/wtech_snackbar.dart';
 export 'components/wtech_mobile_drawer.dart';
+export 'components/body_card_enterprise.dart';
 
