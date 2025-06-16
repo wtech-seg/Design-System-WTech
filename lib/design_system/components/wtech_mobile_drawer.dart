@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import '../theme/wtech_colors.dart';
 
 typedef VoidCallback = void Function();
@@ -28,14 +29,18 @@ class WtechDrawer extends StatelessWidget {
             children: [
               // cabeçalho com logo (ou apenas espaço) e saudação
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 35, horizontal: 16),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 35,
+                  horizontal: 16,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // Aqui você pode colocar seu logo centralizado, se quiser:
                     Center(
-                      child: Image.asset(
-                        'packages/wtech_design_system/assets/pngs/dark_w.png',
+                      child: SvgPicture.asset(
+                        'packages/wtech_design_system/assets/svgs/logobranca.svg',
+                        // Ou 'packages/wtech_design_system/assets/images/my_custom_icon.svg' se o asset estiver no package
                         height: 35,
                       ),
                     ),
@@ -110,10 +115,7 @@ class WtechDrawer extends StatelessWidget {
   }) {
     return ListTile(
       leading: Icon(icon, color: Colors.white70),
-      title: Text(
-        label,
-        style: const TextStyle(color: Colors.white),
-      ),
+      title: Text(label, style: const TextStyle(color: Colors.white)),
       contentPadding: const EdgeInsets.symmetric(horizontal: 16),
       minLeadingWidth: 32,
       onTap: onTap,

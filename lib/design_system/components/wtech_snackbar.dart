@@ -1,50 +1,38 @@
 import 'package:flutter/material.dart';
-import '../design_system.dart'; // Ajuste o import conforme o caminho do seu design_system
+import '../theme/wtech_colors.dart';
 
-/// WtechSnackBar oferece um metodo estático para exibir SnackBars consistentes com o design system,
-/// permitindo customizar a cor de fundo.
+enum SnackBarType { success, error }
+
 class WtechSnackBar {
-  /// Exibe uma SnackBar flutuante estilizada.
-  ///
-  /// [context]: BuildContext onde a SnackBar será exibida.
-  /// [message]: Texto da mensagem principal.
-  /// [backgroundColor]: Cor de fundo opcional (default: WtechColors.primary).
-  /// [actionLabel]: Texto do botão de ação (opcional).
-  /// [onAction]: Callback quando o usuário clicar na ação (opcional).
+
   static void show(
-      BuildContext context,
-      String message, {
-        Color? backgroundColor,
-        String? actionLabel,
-        VoidCallback? onAction,
-      }) {
-    final snackBar = SnackBar(
-      content: Text(
-        message,
-        style: const TextStyle(
-          fontWeight: FontWeight.w800,
-          color: Colors.blueGrey,
-          fontSize: 14,
-        ),
-      ),
-      backgroundColor: backgroundColor ?? WtechColors.primary,
+    BuildContext context,
+    String message, {
+    SnackBarType type = SnackBarType.error,
+  }) {
+    final isSuccess = type == SnackBarType.success;
+    final bgColor =
+        isSuccess ? WtechColors.greenSnackBar : WtechColors.redSnackBar;
+    final icon = isSuccess ? Icons.check_circle_outline : Icons.error_outline;
+
+    final snack = SnackBar(
+      backgroundColor: bgColor,
       behavior: SnackBarBehavior.floating,
-      margin: const EdgeInsets.symmetric(horizontal: 28, vertical: 20),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(6),
+      margin: const EdgeInsets.symmetric(horizontal: 28, vertical: 12),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      content: Row(
+        children: [
+          Icon(icon, color: WtechColors.textDarkGray),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Text(message, style: const TextStyle(color: WtechColors.textDarkGray)),
+          ),
+        ],
       ),
-      elevation: 6,
-      action: (actionLabel != null && onAction != null)
-          ? SnackBarAction(
-        label: actionLabel,
-        onPressed: onAction,
-        textColor: WtechColors.textWhite,
-      )
-          : null,
     );
 
     ScaffoldMessenger.of(context)
       ..hideCurrentSnackBar()
-      ..showSnackBar(snackBar);
+      ..showSnackBar(snack);
   }
 }
