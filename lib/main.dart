@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:wtech_design_system/design_system/components/body_card.dart';
-import 'package:wtech_design_system/design_system/components/password_field.dart';
-import 'package:wtech_design_system/design_system/components/wtech_appbar.dart';
-import 'package:wtech_design_system/design_system/components/wtech_mobile_button.dart';
-import 'package:wtech_design_system/design_system/components/navigation_drawer.dart';
-import 'package:wtech_design_system/design_system/components/wtech_mobile_drawer.dart';
 import 'design_system/design_system.dart';
 
 void main() {
@@ -51,6 +45,7 @@ class DesignSystemShowcase extends StatelessWidget {
                   WtechMobileButton(label: 'Entrar', onPressed: () {}),
                   PasswordField(),
                   BodyCard(name: 'Teste'),
+                  BodyCardEnterprise(name: 'Empresa Teste'),
                 ],
               ),
             ),
