@@ -29,7 +29,7 @@ class DesignSystemShowcase extends StatelessWidget {
       appBar: WtechAppBar(title: ''),
       body: Row(
         children: [
-          WtechDrawer(userName: 'TESTE', onLogout: (){},),
+          WtechDrawer(userName: 'TESTE', onLogout: (){}, onAccess: () {  }, onSettings: () {  }, onSAC: () {  },),
           NavigationDrawerWtech(),
           Expanded(
             child: Center(
