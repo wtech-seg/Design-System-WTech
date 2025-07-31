@@ -1,3 +1,5 @@
+// wtech_design_system/lib/design_system/components/wtech_drawer.dart
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../theme/wtech_colors.dart';
@@ -8,26 +10,38 @@ class WtechDrawer extends StatelessWidget {
   /// O nome do usuário conectado — você provê lá na Home.
   final String userName;
 
+  /// O que deve acontecer quando clicar em “Acessos”
+  final VoidCallback onAccess;
+
+  /// O que deve acontecer quando clicar em “Configurações”
+  final VoidCallback onSettings;
+
+  /// O que deve acontecer quando clicar em “SAC”
+  final VoidCallback onSAC;
+
   /// O que deve acontecer quando clicar em “Sair”
   final VoidCallback onLogout;
 
   const WtechDrawer({
     super.key,
     required this.userName,
+    required this.onAccess,
+    required this.onSettings,
+    required this.onSAC,
     required this.onLogout,
   });
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      width: 280, // largura fixa para se aproximar do mockup
+      width: 280, // largura fixa para ficar próximo ao mockup
       child: Container(
-        color: WtechColors.primary, // fundo escuro
+        color: WtechColors.primary,
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // cabeçalho com logo (ou apenas espaço) e saudação
+              // cabeçalho com logo e saudação
               Padding(
                 padding: const EdgeInsets.symmetric(
                   vertical: 35,
@@ -36,11 +50,9 @@ class WtechDrawer extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Aqui você pode colocar seu logo centralizado, se quiser:
                     Center(
                       child: SvgPicture.asset(
                         'packages/wtech_design_system/assets/svgs/logobranca.svg',
-                        // Ou 'packages/wtech_design_system/assets/images/my_custom_icon.svg' se o asset estiver no package
                         height: 35,
                       ),
                     ),
@@ -60,17 +72,23 @@ class WtechDrawer extends StatelessWidget {
               ),
 
               const Divider(color: Colors.white24, height: 1),
-
-              // Espaço antes das opções
               const SizedBox(height: 16),
 
               // Itens do menu
+              _buildTile(
+                icon: Icons.account_tree_rounded,
+                label: 'Acessos',
+                onTap: () {
+                  Navigator.pop(context);
+                  onAccess();
+                },
+              ),
               _buildTile(
                 icon: Icons.settings,
                 label: 'Configurações',
                 onTap: () {
                   Navigator.pop(context);
-                  // TODO: rota de configurações
+                  onSettings();
                 },
               ),
               _buildTile(
@@ -78,12 +96,11 @@ class WtechDrawer extends StatelessWidget {
                 label: 'SAC',
                 onTap: () {
                   Navigator.pop(context);
-                  // TODO: rota de SAC
+                  onSAC();
                 },
               ),
 
               const Spacer(),
-
               const Divider(color: Colors.white24, height: 1),
 
               // Botão de logout
