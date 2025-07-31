@@ -15,6 +15,7 @@ export 'components/navigation_drawer.dart';
 export 'components/blocking_modal.dart';
 export 'components/inner_shadow.dart';
 export 'components/password_field.dart';
+export 'components/loading_dialog.dart';
 
 // Ajuste: escondendo AvatarCardCircle duplicada do arquivo enterprise
 export 'components/body_card.dart';
