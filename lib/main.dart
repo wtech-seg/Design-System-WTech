@@ -45,7 +45,6 @@ class DesignSystemShowcase extends StatelessWidget {
                   WtechMobileButton(label: 'Entrar', onPressed: () {}),
                   PasswordField(),
                   BodyCard(name: 'Teste'),
-                  BodyCardEnterprise(name: 'Empresa Teste'),
                 ],
               ),
             ),
