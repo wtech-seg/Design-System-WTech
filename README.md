@@ -48,8 +48,6 @@ lib/
 │   │   ├── wtech_theme.dart
 │   │   ├── wtech_colors.dart
 │   │   └── wtech_text_styles.dart
-├── utils/
-│   └── dialogs.dart
 
 ````
 
