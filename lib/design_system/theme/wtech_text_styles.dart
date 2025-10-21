@@ -4,18 +4,24 @@ import 'wtech_colors.dart';
 
 class WtechTextStyles {
   static const headline = TextStyle(
-    fontSize: 36,
+    fontSize: 32,
     fontWeight: FontWeight.w800,
     color: WtechColors.textDarkGray,
   );
 
-  static const body = TextStyle(
-    fontSize: 16,
+  static const bodyHeadLine = TextStyle(
+    fontSize: 25,
+    fontWeight: FontWeight.w500,
     color: WtechColors.textDarkGray,
   );
 
+  static const body = TextStyle(
+    fontSize: 20,
+    color: WtechColors.textCyan,
+  );
+
   static const button = TextStyle(
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: FontWeight.w600,
     color: WtechColors.textWhite,
   );
