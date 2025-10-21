@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class BodyCard extends StatelessWidget {
   final String name;
   final double cardRadius;
   final Color? cardColor;
+  final Widget? leading;
 
   const BodyCard({
-    Key? key,
+    super.key,
     required this.name,
     this.cardRadius = 16.0,
     this.cardColor,
-  }) : super(key: key);
+    this.leading,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +28,13 @@ class BodyCard extends StatelessWidget {
           boxShadow: [
             // Sombra clara no canto superior/esquerda
             BoxShadow(
-              color: Colors.white.withOpacity(0.7),
+              color: Colors.white.withValues(alpha: 0.7),
               offset: const Offset(-3, -3),
               blurRadius: 6,
             ),
             // Sombra escura no canto inferior/direita
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withValues(alpha: 0.1),
               offset: const Offset(3, 3),
               blurRadius: 6,
             ),
@@ -41,14 +42,9 @@ class BodyCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            // Ícone ou avatar em estilo neumórfico
             AvatarCardCircle(
               baseColor: baseColor,
-              child:SvgPicture.asset(
-                'packages/wtech_design_system/assets/svgs/profile.svg', // Ou 'packages/wtech_design_system/assets/images/my_custom_icon.svg' se o asset estiver no package
-                width: 30,
-                height: 30,
-              ),
+              child: leading ?? const SizedBox.shrink(),
             ),
             const SizedBox(width: 15),
             // Nome
@@ -76,11 +72,11 @@ class AvatarCardCircle extends StatelessWidget {
   final Color baseColor;
 
   const AvatarCardCircle({
-    Key? key,
+    super.key,
     required this.child,
     required this.baseColor,
     this.size = 48,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -92,12 +88,12 @@ class AvatarCardCircle extends StatelessWidget {
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(
-            color: Colors.white.withOpacity(0.7),
+            color: Colors.white.withValues(alpha: 0.7),
             offset: const Offset(-2, -2),
             blurRadius: 4,
           ),
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             offset: const Offset(2, 2),
             blurRadius: 4,
           ),
