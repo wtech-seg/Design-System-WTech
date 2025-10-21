@@ -1,4 +1,4 @@
-library wtech_design_system;
+library;
 
 // Temas
 export 'theme/wtech_colors.dart';
@@ -15,8 +15,8 @@ export 'components/navigation_drawer.dart';
 export 'components/blocking_modal.dart';
 export 'components/inner_shadow.dart';
 export 'components/password_field.dart';
-export 'components/loading_dialog.dart';
+export 'components/dialogs/wtech_dialogs.dart';
 
 // Ajuste: escondendo AvatarCardCircle duplicada do arquivo enterprise
 export 'components/body_card.dart';
-export 'components/body_card_enterprise.dart' hide AvatarCardCircle;
+export 'components/wtech_icon.dart';
