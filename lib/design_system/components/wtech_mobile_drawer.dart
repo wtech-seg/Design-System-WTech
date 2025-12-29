@@ -52,8 +52,9 @@ class WtechDrawer extends StatelessWidget {
                   children: [
                     Center(
                       child: SvgPicture.asset(
-                        'packages/wtech_design_system/assets/svgs/logobranca.svg',
+                        'assets/svgs/logobranca.svg',
                         height: 35,
+                        package: 'wtech_design_system',
                       ),
                     ),
                     const SizedBox(height: 55),

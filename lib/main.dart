@@ -37,8 +37,9 @@ class DesignSystemShowcase extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   SvgPicture.asset(
-                    'packages/wtech_design_system/assets/svgs/logobranca.svg',
+                    'assets/svgs/logobranca.svg',
                     width: 120,
+                    package: 'wtech_design_system',
                   ),
                   const SizedBox(height: 24),
                   WtechButton(label: 'Entrar', onPressed: () {}),
@@ -54,4 +55,3 @@ class DesignSystemShowcase extends StatelessWidget {
     );
   }
 }
-

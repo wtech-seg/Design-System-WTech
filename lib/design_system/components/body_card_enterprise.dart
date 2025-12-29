@@ -45,9 +45,10 @@ class BodyCardEnterprise extends StatelessWidget {
             AvatarCardCircle(
               baseColor: baseColor,
               child:SvgPicture.asset(
-                'packages/wtech_design_system/assets/svgs/enterprise.svg', // Ou 'packages/wtech_design_system/assets/images/my_custom_icon.svg' se o asset estiver no package
+                'assets/svgs/enterprise.svg', // Ou 'packages/wtech_design_system/assets/images/my_custom_icon.svg' se o asset estiver no package
                 width: 30,
                 height: 30,
+                package: 'wtech_design_system',
               ),
             ),
             const SizedBox(width: 15),

@@ -35,8 +35,9 @@ class WtechAppBar extends StatelessWidget implements PreferredSizeWidget {
           padding: const EdgeInsets.only(right: 21),
           child: actionWidget ??
               Image.asset(
-                'packages/wtech_design_system/assets/pngs/dark_w.png',
+                'assets/pngs/dark_w.png',
                 height: 23,
+                package: 'wtech_design_system',
               ),
         ),
       ],
