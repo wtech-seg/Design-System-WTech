@@ -42,7 +42,7 @@ class DesignSystemShowcase extends StatelessWidget {
                     package: 'wtech_design_system',
                   ),
                   const SizedBox(height: 24),
-                  WtechButton(label: 'Entrar', onPressed: () {}),
+                  WtechButton(label: 'Entrar', onPressed: () {}, minWidth: 147, minHeight: 48),
                   WtechMobileButton(label: 'Entrar', onPressed: () {}),
                   PasswordField(),
                   BodyCard(name: 'Teste'),
