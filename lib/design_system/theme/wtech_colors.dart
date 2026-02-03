@@ -17,9 +17,17 @@ class WtechColors {
   static const Color textCyan = Color(0xFF009DE0);
   static const Color textRed = Color(0xFFEB333E);
 
+  // Toast
+  static const Color backgroundSuccess = Color(0xFFCCEFE9);
+  static const Color backgroundError = Color(0xFFFBD6D8);
+  static const Color backgroundWarning = Color(0xFFFFF2D9);
+  static const Color backgroundInfo = Color(0xFFCCE6FF);
+  static const Color highlightSuccess = Color(0xFF00AE8F);
+  static const Color highlightError = Color(0xFFEB333E);
+  static const Color highlightWarning = Color(0xFFFFBC42);
+  static const Color highlightInfo = Color(0xFF1180FA);
 
   // SnacksBar
   static const Color redSnackBar = Color(0xFFFBD6D8);
   static const Color greenSnackBar = Color(0xFFCCEFE9);
-
 }

@@ -23,5 +23,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/svgs/
     - assets/pngs/
+    - assets/svgs/
+    - assets/svgs/toasts/

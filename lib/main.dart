@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:wtech_design_system/design_system/components/dialogs/toast.dart';
 import 'design_system/design_system.dart';
 
 void main() {
@@ -42,7 +43,7 @@ class DesignSystemShowcase extends StatelessWidget {
                     package: 'wtech_design_system',
                   ),
                   const SizedBox(height: 24),
-                  WtechButton(label: 'Entrar', onPressed: () {}, minWidth: 147, minHeight: 48),
+                  WtechButton(label: 'Entrar', onPressed: () { showWtechToast(context, message: "Clicou no botão **Entrar**", type: WtechToastType.info);}, minWidth: 147, minHeight: 48),
                   WtechMobileButton(label: 'Entrar', onPressed: () {}),
                   PasswordField(),
                   BodyCard(name: 'Teste'),
